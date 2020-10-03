@@ -1,0 +1,30 @@
+Team AEI
+Ishita Gupta, Eric Lo, Alvin Wu
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity 
+   Analyzing and comparing other people's approaches to previous homework
+2020-10-03
+
+Our own files:    Some of us made dictionaries of a list of jobs and a list of percents while others made
+                    a dictionary pairing a job with its corresponding percent.
+                  Some of us parsed the file normally and split the file using the commas, making a separate
+                    case for the jobs containing quotes, while some of us parsed it as a csv file and did not
+                    need to create that extra case.
+                  Some of us used rsplit to look for that last comma in the edge case, while others used the quotes.
+                  Some of us played with line numbers to skip the title and totals, others used startswith, and some just
+                    popped a specific element after reading the file.
+                  Some of us used shorthand for for loops.
+                  To get the occupations.csv, some of us copy pasted the contents and some of us right clicked the file
+                    and saved the link as a csv file.
+                  
+Team Nintentoads: What made you guys go for a more mathematical solution (seems like a unique approach)? 
+                  They added up percents, stopping at the one that took the sum over a randomly generated number, choosing that percent's job.
+                  Are this algorithm and the random.choices function the same?
+                  The big plan was clear and convenient.
+                  
+Team Blue Bird:   They formed a dictionary by splitting the file into an array and then iterating through that array
+                    instead of iterating through the file line by line and adding to a dictionary.
+                  Why does rounding work in a separate for loop but not the same for loop? What do you mean "some percentages
+                    wouldn't round"?
+                  What does random.uniform do?
+                  They turned each job's percentage into a set of ranges totalling from 0 to 99.8 in order to pick out one.
