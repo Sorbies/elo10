@@ -1,7 +1,9 @@
 Team AEI
 Ishita Gupta, Eric Lo, Alvin Wu
 SoftDev
-K08 -- Cross Pollination and Virtual Insanity 
+K08 -- Cross Pollination and Virtual Insanity/Find out what the command below does (without using StackOverflow)/The command creates a virtual python environment
+
+
 2020-10-03
 
 $ python3 -m venv ~/myherozero
