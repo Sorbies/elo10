@@ -1,0 +1,28 @@
+Team AEI
+Ishita Gupta, Eric Lo, Alvin Wu
+SoftDev
+K09 -- Simple Path to Greatness/We answered questions about a sample flask application prior to testing it, then reflected on our answers
+2020-10-06
+
+Q0: Where have you seen similar syntax in other langs?
+We haven't seen the exact syntax (__name__) in other languages such as Java and C. Upon doing some research, we learned that that syntax 
+dynamically grabs the file name. In line 2, essentially what we are doing is storing the file name in a variable. This can also be
+done in other languages, but the syntax varies. For example, in Java you might use Path getFileName().
+
+Q1: What points of reference do you have for meaning of '/'?
+We have seen the forwardslash in filepaths to show the exact location of an item. It's used to separate the folders to make it
+easier for the user. It's similarly used in website URLs. 
+
+Q2: Where will this print to? Q3: What will it print?
+This will print to the webpage that gets served by the flask app. It will print the filename (in this case, app.py).
+
+Q3: Will this appear anywhere? How u know?
+It will appear below the printed filename. We're not sure, but we made an educated guess.
+
+Q4: Where have you seen similar construcs in other languages?
+In Java, app is the object and run is a method belonging to that object. By writing app.run(), you call that method.
+
+Post-Running the Flask app:
+Although the webpage functioned mostly according to our expectations, we were incorrect about Q2. We had thought that it would print the name of
+the file on the webpage, but only "No hablo queso!" showed up. This suggests that if you want something to be printed onto the page, you must return 
+it rather than printing. 
