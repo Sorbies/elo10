@@ -19,12 +19,12 @@ for line in occupations:
     percentage = float(line[-1])
     #Updates dictionary with new key_value pair
     jobsPercentages[jobTitle] = percentage  
-    
-#Choose random job
-job = ((random.choices(list(jobsPercentages.keys()), weights=list(jobsPercentages.values()), k=1))[0])
+
 
 @app.route("/")       
-def hello_world():
+def hello_world():   
+    #Choose random job
+    job = ((random.choices(list(jobsPercentages.keys()), weights=list(jobsPercentages.values()), k=1))[0])
     output = "Team AEI: Alvin Wu, Eric Lo, Ishita Gupta" + "<br/><br/>" + "List of potential jobs:" + "<br/><br/>" + str(list(jobsPercentages.keys())) + "<br/><br>" +  "Job: " + job
     return output
 
