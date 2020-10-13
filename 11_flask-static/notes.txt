@@ -1,0 +1,26 @@
+Team AEI
+Ishita Gupta, Eric Lo, Alvin Wu
+SoftDev
+K11 -- Some Things Never Change
+2020-10-13
+
+Notes:
+- The 01_flask-static folder contains a flask app and a static folder, which contains the two foo files
+- The flask app and static folder are on the same tree level
+- There's no reference to the static folder in the app.py
+
+Predictions:
+- To access foo and foo.html we will need to specify the file path in the url (starting from the static folder)
+- The foo and foo.html files have different extensions and as such would have different urls even though they have the same name
+- If the url is just "http://127.0.0.1:5000/static" then we would get an error because static is not a file that can be served by the app,
+  and we did not provide an @app.route decorator for it either
+- At the url "http://127.0.0.1:5000/static/foo.html" we would see the page created by the foo.html file
+- At the url "http://127.0.0.1:5000/static/foo" we would see the contents of the txt file
+
+Results:
+- All of our predictions except the last one were correct
+- When at the url "http://127.0.0.1:5000/static/foo", the foo file was automatically downloaded instead of being displayed
+- When the url was changed to "http://127.0.0.1:5000/static/foo.txt" however, the file was served up and it's contents were displayed
+
+
+

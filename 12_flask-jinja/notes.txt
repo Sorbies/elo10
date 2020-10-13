@@ -1,0 +1,35 @@
+Team AEI
+Ishita Gupta, Eric Lo, Alvin Wu
+SoftDev
+K12 -- ...or The Only Constant is Change?
+2020-10-13
+
+Q0: What happens if you remove render_template from this line?
+render_template is a function you are importing so if you don't import it you 
+will not be able to serve the html page on the site - it will return an error
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+http://127.0.0.1:5000/my_foist_template
+
+Q2: What is the significance of each argument?
+The first argument is referring to the template that is being rendered by the app
+The second argument gets passed into the template as the title of the page
+The third argument is the list that gets passed into the template and is printed in the body of the page
+
+Q/C/C
+- What is the difference between the "{" and "{{" 
+-- Single "{" are for conditional statements and "{{" is for pther Jinja code within the HTML
+- Does render_template have any other potential parameters besides the template name and the variables that 
+  get passed into it
+-- You can have unlimited variables to pass but there aren't any other parameters
+- How does the template know which part of the Jinja code is a variable
+
+Predictions
+- The home page (url: http://127.0.0.1:5000/) is going to have "No hablo queso!" printed on it
+- The page at (url: http://127.0.0.1:5000/my_foist_template) will be the rendered template
+    - The title of the page will be retrieved from the app.py (in this case it will be "fooooo")
+    - The body of the page will be a list of items separated by new lines retrieved from the app.py 
+    (in this case 0/1/1/2/3/5/8 where the "/" indicate a new line)
+
+Results
+- All of our predictions were correct
