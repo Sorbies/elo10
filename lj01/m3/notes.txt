@@ -1,0 +1,46 @@
+Team 3- Eric Lo, Ethan Shenker, Anya Zorin
+SoftDev
+lj01: m3 -- Chapter 3 MongoDB: Creating and Manipulating Documents
+2020-10-29
+
+Adding Documents to Atlas:
+    -you can add to collection by using the insert documents button (top right)
+-“_id” field has a unique value in every mongodb document
+        -automatically made as ObjectID data type
+        -can be set to a manual unique value as a string
+        -key value pairs can be all same or all diff as long as the _id is unique
+-tab to move from key to field etc
+    -when inserting from mongo shell 
+        -Connect to db: mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/admin"
+        - Navigate to the db (use  <dbname>)
+        -db.inspections.insert(<document typed out as JSON>)
+        - prevents replicas based off _id value
+        -if _id value not given it makes a new one for you
+    -findOne( <query> ) gives you some random doc that matches the query
+    -you can insert multiple documents using the same insert command by putting them in  an array with brackets 
+    -documents inserted in this way will add the documents in order and stop if there is an error, unless you do insert([..], {“ordered”: false})
+        -when you specify ordered: false, every unique _id document will be added to the collection instead of halting if there was a dupe error before
+    -if you insert documents into a non existent collection, the collection is made
+    -if nothing is inserted in a collection, it won’t show up when you do show collections
+
+Updating Documents:
+    -you can store data as an array of objects in mongodb
+    -when you hover over the document in the atlas viewer, there are buttons in the top right to edit, copy, clone, and delete
+    -you choose where to insert something  by clicking the line number
+        -if the line number specifies an array, you have an option in that button to also add to the array
+    -updateOne( <query> , <update> ) updates whichever document it finds first that matches the query
+    -updateMany( <query > , <update> ) updates all the documents matching the query
+        - {“$inc”: { <field>: <increment>, <field>: <increment>, ...}} is an MQL update operator that increments the field
+        -{“$set”: { <field>: <value>, <field>: <value>, ...}} sets the field to the value
+            -if you set a field that does not exist to a value, it will create a new field
+        -{“$push”: { <field>: <value>, <field>: <value>, ...}} adds an element to an array field. If the field doesn’t already exist, the field will be created.
+        -https://docs.mongodb.com/manual/reference/operator/update/#id1
+
+Deleting Documents:
+    -Garbage can button in the data explorer next to the name on the left
+    -deleteOne(), deleteMany() function similarly to update.
+        -use deleteOne() only with an “_id” query because why would you delete a random one without knowing what you’re doing
+    -to delete a collection, use drop()
+
+
+    
