@@ -10,20 +10,28 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 		<title>foo title</title>
 	</head>
 
+	<!-- Set background color and font -->
 	<body style="background-color:dimgray; font-family: Helvetica;">
-		<h1 style="color:white; text-align: center; background-color:rgb(177, 175, 175); margin-bottom: 0; width: 100%;">h1 foo</h1>
+		<!-- Set text color, center text, set background color, remove space from bottom,  -->
+		<h1 style="color:white; text-align: center; background-color:rgb(177, 175, 175); margin: 0; width: 100%;">h1 foo</h1>
+		<!-- Creates a 2 column grid system with the specified widths -->
 		<div style="display: grid; grid-template-columns: 20%, 80%;">
+			<!-- Set background color, assign div to first column, and add some space to the right of the text  -->
 			<div style="height: 100%; background-color:gray; grid-column: 1; padding: 0 10px">
 				<h3>nav foo</h3>
+				<!-- Remove bullets and space to the left of text -->
 				<ul style="list-style-type: none; padding: 0;">
+					<!-- Set text color and remove hyperlink underline -->
 					<li><a href="" style="color: white; text-decoration: none;">dis</a></li>
 					<li><a href="" style="color: white; text-decoration: none;">dat</a></li>
 					<li><a href="" style="color: white; text-decoration: none;">de udda ting</a></li>
 				</ul>
 			</div>
 			
+			<!-- Set background color, assign div to second column, and add space to the left to separate from navbar and some to the right of the text -->
 			<div style="height: 100%; background-color:gray; grid-column: 2; padding: 0 10px 0 50px;">
 				<h2>main foo heading</h2>
+				<!-- Credits to https://loremipsum.io/generator/ for the lorem ipsum text -->
 				<p>Blandit massa enim nec dui nunc mattis enim. Etiam tempor orci eu lobortis elementum. Duis at tellus at urna condimentum. 
 					Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. 
 					Risus commodo viverra maecenas accumsan lacus vel facilisis. Tincidunt vitae semper quis lectus nulla at volutpat. 
@@ -46,11 +54,11 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 				</p>
 			</div>
 		</div>
-		
+		<!-- Remove the spaces the tag creates -->
 		<br style="display: none;">
 		<br style="display: none;">
-
-		<div style="background-color:rgb(58, 58, 58); width: 100%; height: 36px; text-align: right; font-size: 20px; color:gray; padding: 5px 10px; box-sizing: border-box;">
+		<!-- Set background color, make the height the same as the foo h1, aligh text to the right, set text size and color, border-box prevents padding from being applied outside of the element -->
+		<div style="background-color:rgb(78, 78, 78); width: 100%; height: 36px; text-align: right; font-size: 20px; color:rgba(153, 153, 153, 0.774); padding: 5px 10px; box-sizing: border-box;">
 			Copyright &copy; 2016 Clyde "Thluffy" Sinclair
 		</div>
 
@@ -60,4 +68,3 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 
 </html>
 
-<!-- Credits to https://loremipsum.io/generator/ for the lorem ipsum text -->

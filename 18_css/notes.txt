@@ -1,0 +1,31 @@
+<!-- Team iLeg - Ishita Gupta, Eric Lo
+SoftDev
+K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
+2021-1-12 -->
+
+-To section off text to the left and right, we used grids in our CSS. To specify the grid layout, we
+ used display: grid. The way grid-template-columns works is that you enter in multiple length measurements,
+ and each measurement creates a new column with that width. For each element that fills out the grid, you put
+ the grid-column property and then the column number. For the column number, it starts from 1 (1 is the first
+ column, not 0) and to make an element span multiple columns, you have to do a / b where it starts from a and goes
+ up to b-1.
+-In the grid columns, having percent padding as opposed to pixel padding may cause the columns to be unintended sizes,
+ possibly because the padding interferes with the already specified column measurements.
+-Measurements can be in px but also % (of screen)
+-The padding property takes in measurements starting from top padding, then going clockwise (right, bottom, left)
+-The padding by default adds to the width of an element, but to add it within the element you have to add in box-sizing: 
+ border-box so that the size of the box remains the same and it doesn't shift the entire page layout.
+-The padding is the space between the border and element, while the margins is the space between the border and background
+-We tinkered around with the html in the browser directly and saved our changes by Ctrl+S'ing.
+ It's useful for adding and editing css property in real-time.
+-Inspect element > right click: brings up a lot more customizations options for editing in browser
+-In inspect element, you can also see assigned css property values and also a diagram for margins, etc.
+-Float property aligns text to a side of the border
+-If an internal styling reference has wrapper classes, then that's the equivalent of a div for inline.
+-.<parent>.<child> for inheritance in internal or external
+-If the css file is not in the same directory as the html, then when you link it in the html, you have to specify the relative file path
+-text-decoration: none removes the underline from a hyperlink
+-list-style-type: none removes the bullets from a list
+-font-family: font determines a font
+
+<!-- Credits to https://loremipsum.io/generator/ for the lorem ipsum text -->

@@ -5,16 +5,10 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- Clyde "Thluffy" Sinclair
-	SoftDev pd0
-	K20 -- CSS basics
-	2019-11-01f
-	WORK FILE for CSS 	
-	-->
-
 <head>
 	<meta charset="utf-8"/>
 	<title>foo title</title>
+	<!-- The actual CSS is the same as the inline, however we used classes and selectors to apply the CSS to certain elements -->
 	<style>
 		body {
 		background-color: dimgray; 
@@ -38,11 +32,11 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 		}
 
 		.footer {
-			background-color:rgb(58, 58, 58); 
+			background-color:rgb(78, 78, 78);
 			height: 36px; 
 			text-align: right; 
 			font-size: 20px; 
-			color:gray; 
+			color:rgba(153, 153, 153, 0.774);
 			padding: 5px 10px; 
 			box-sizing: border-box;
 			grid-column: 1 / 3; 
@@ -53,7 +47,7 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 			color:white; 
 			text-align: center; 
 			background-color:rgb(177, 175, 175); 
-			margin-bottom: 0; 
+			margin: 0; 
 			grid-column: 1 / 3;
 		}
 
@@ -87,6 +81,7 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 
 	<div class="main">
 		<h2>main foo heading</h2>
+		<!-- Credits to https://loremipsum.io/generator/ for the lorem ipsum text -->
 		<p>Blandit massa enim nec dui nunc mattis enim. Etiam tempor orci eu lobortis elementum. Duis at tellus at urna condimentum. 
 			Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. 
 			Risus commodo viverra maecenas accumsan lacus vel facilisis. Tincidunt vitae semper quis lectus nulla at volutpat. 
@@ -121,4 +116,3 @@ K18 -- Filler and Finery/Rendering a webpage with only HTML and CSS
 
 </html>
 
-<!-- Credits to https://loremipsum.io/generator/ for the lorem ipsum text -->
