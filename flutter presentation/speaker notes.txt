@@ -1,0 +1,30 @@
+slide 2
+SDK - software development kit. An assembly of libraries, documentation, examples, tutorials, tools required to develop software
+
+slide 4
+Convenient to debug: hot reload and hot restart
+Cross platform: one single code base that works for ios and android. E.g. You don’t have to learn swift for specifically iOS (native app development), you can just know Flutter and have it work for both iOS and Android. When a Flutter app compiles, it talks to a separate compiler like the JVM instead of the OS, which allows it to work for multiple platforms. That extra layer of separation adds lag between executing the app and the results, though with Flutter it seems to be a 30 seconds to a minute if the app is not already running, and instant when hot reloading.
+Popular: used by a lot of modern companies. Phones are everywhere compared to computers
+
+slide 5
+Widget: some widgets are already included and have different properties you can customize, kind of like Bootstrap/Foundation where you give html tags classes from the FEF and customize its properties in the CSS. Also the code is responsible for the UI layout, just like HTML
+
+slide 6
+We’ve completed two codelab tutorials to get used to Flutter. On the left is an app that we made to generate an infinite scrolling list of random word combinations. On the right is a rudimentary messaging app. WE are going to demo the messaging app and do a whirlwind review of the code.
+
+The flutter app has a main method (like Java) that executes the app, which is an object of a class that’s defined later
+Each class has a build method that returns a widget, which is a class specific to flutter, and widgets tell the app what to display on the phone. Each widget has its own customizable properties and overall structure/purpose.
+The build method for the overarching widget, FriendlyChatApp, contains a MaterialApp. MaterialApp is an example of the many widgets that come with Flutter. Each of Flutter’s widgets have preexisting functionalities, e.g. MaterialApp has its own UI elements ready for you to use
+When you invoke a widget, you can specify what to put in each parameter, which each are responsible for a certain thing. Title determines what goes in the top bar. Theme shows an example of how cross platform developing is made simpler in Flutter <SHOW HOT RELOADING HERE>. The home property has a widget that is defined later in the code called ChatScreen. For MaterialApp, the home property determines what shows up in the main section of the screen.
+
+ChatScreen is known as a StatefulWidget, which means that it is capable of being updated. It makes the most sense to use stateful widgets for user input. Stuff that changes. The way flutter works is that it creates a separate corresponding state class which has all the build widgets and whatnot. 
+The ChatScreenState’s build method is complex (WILL NOT BREAK DOWN THE NITTY GRITTY SYNTAX, THE DOCUMENTATION IS REALLY GREAT IN THAT REGARD), but it represents the hierarchy of widgets that go into splitting the app into sections. They function a lot like HTML divs. Since each widget comes with its own properties, it’s also like adding CSS properties to a particular class of divs.
+Near the end of the ChatScreenState’s build method, there is a buildTextComposer defined. This controls the behavior of the input field. It handles behaviors for things such as: 
+preventing the user from sending empty messages, 
+greying out the send button when the input field is empty, 
+adding the sent message to the list of messages to display, and 
+clearing the input field after a message is sent. 
+Importantly, to do these behaviors, the setState method is invoked to signal to the app that the screen has to update. Up until now, we’ve just been talking about flutter’s widgets and how they control the appearance of the app, but this buildTextComposer part shows how flutter apps provide functionality.
+
+slide 7
+If you were following a codelab like we were, you can see snippets of code directly there. However, if you were developing from scratch, because of the abundance of elements and widgets used within Flutter, it might be hard to develop an intuition of which widget to use. So, Google it
