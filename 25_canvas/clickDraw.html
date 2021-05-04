@@ -1,0 +1,51 @@
+<!-- Team e -- Ari Schechter, Eric Lo, William Yin
+SoftDev
+K25 -- I See a Red Door...: Learning to use the canvas tag with JavaScript
+2021-05-03 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>canvas test</title>
+    <style>
+        #slate {
+            border: 1px solid black;
+        }
+        
+        .container {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn {
+            margin-left: 1vw;
+            margin-right: 1vw;
+            padding: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: cadetblue;
+            border-radius: 10vw;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas height="600" width="600" id="slate"></canvas>
+    </div>
+    <div class="container" style="height: 10vh;">
+        <button id="toggle-button" class="btn">Rectangle</button>
+        <button onclick="clearCanvas()" class="btn">Clear Canvas</button>
+    </div>
+
+    <script src="clickDraw.js"></script>
+</body>
+
+</html>
