@@ -1,0 +1,20 @@
+eam javabean -- Pak Ming Lau, Eric Lo
+SoftDev pd1
+K28 -- Bubble Bubble Toil Trouble
+2021-05-11
+
+/1
+- alert(); gives a dialog box
+- since there are multiple td elements, each one was assigned an EventListener
+
+/2
+- when the user clicks on a cell, three dialog boxes show up in succession, in the order of cell, row, table
+
+/3
+- the third argument for .addEventListener() is a boolean that dictates whether or not to use capturing
+- if there is a mix of capturing and bubbling, capturing happens first, then bubbling
+    - the order for version 3 was table, cell, row
+- e.stopPropagation() only lets the first EventListener to respond to a given event (the table gets put in a dialog box, but not the row and cell)
+
+/4
+- order in which the EventListener are put into the js file does not affect the order the EventListeners are activated in (capturing, then bubbling)
